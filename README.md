@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Dashboard
 
-## Getting Started
+A modern weather dashboard built with Next.js that allows users to track weather conditions across multiple cities. This project uses json-server to mock weather API responses for development and demonstration purposes.
 
-First, run the development server:
+![Weather Dashboard Screenshot](./public/screenshot.png)
 
+## Features
+
+- 🌡️ Real-time weather data simulation for multiple cities
+- 🔄 Temperature unit conversion (Celsius/Fahrenheit)
+- 🏙️ Support for major cities: London, Paris, Lagos, Tokyo, and New York
+- 📱 Responsive design for all devices
+- ⚡ Client-side state management with React hooks
+- 💾 Local storage persistence for temperature unit preference
+- 🎨 Modern UI with Tailwind CSS
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks + Local Storage
+- **Mock API**: json-server
+- **Icons**: Lucide React
+- **Components**: Custom UI components with shadcn/ui
+
+## Prerequisites
+
+- Node.js 18+ installed on your machine
+- npm or yarn package manager
+
+## Development Setup
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/weather-dashboard.git
+cd weather-dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the mock API server:
+```bash
+npm run server
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. In a new terminal, start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) to view the application
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+weather-dashboard/
+├── src/
+│   ├── app/                    # Next.js app router files
+│   ├── components/
+│   │   ├── ui/                # Reusable UI components
+│   │   └── weather/           # Weather-specific components
+│   ├── lib/
+│   │   ├── constants.ts       # Application constants
+│   │   ├── types.ts          # TypeScript types
+│   │   └── weatherService.ts  # Weather data fetching logic
+│   └── hooks/                 # Custom React hooks
+├── public/                    # Static assets
+├── db.json                    # Mock API data
+└── package.json              
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Scripts
 
-## Deploy on Vercel
+- `npm run dev` - Starts the development server
+- `npm run server` - Starts the json-server mock API
+- `npm run build` - Creates a production build
+- `npm start` - Runs the production build
+- `npm run lint` - Runs ESLint for code quality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Endpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The mock API runs on `http://localhost:3001` with the following endpoints:
+
+- `GET /weather/:city` - Returns weather data for a specific city
+
+Example response:
+```json
+{
+  "city": "London",
+  "temperature": 18,
+  "humidity": 70,
+  "wind": 12,
+  "icon": "partly-cloudy"
+}
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- UI Components inspired by [shadcn/ui](https://ui.shadcn.com)
+- Icons from [Lucide Icons](https://lucide.dev)
+- Built with [Next.js](https://nextjs.org)
