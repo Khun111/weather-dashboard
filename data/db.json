@@ -1,0 +1,44 @@
+{
+  "cities": {
+    "london": {
+      "city": "London",
+      "temperature": 18,
+      "condition": "Cloudy",
+      "humidity": 76,
+      "windSpeed": 12,
+      "icon": "cloud"
+    },
+    "paris": {
+      "city": "Paris",
+      "temperature": 20,
+      "condition": "Partly Cloudy",
+      "humidity": 68,
+      "windSpeed": 15,
+      "icon": "cloud"
+    },
+    "lagos": {
+      "city": "Lagos",
+      "temperature": 30,
+      "condition": "Sunny",
+      "humidity": 80,
+      "windSpeed": 10,
+      "icon": "sun"
+    },
+    "tokyo": {
+      "city": "Tokyo",
+      "temperature": 25,
+      "condition": "Clear",
+      "humidity": 70,
+      "windSpeed": 5,
+      "icon": "sun"
+    },
+    "new york": {
+      "city": "New York",
+      "temperature": 22,
+      "condition": "Rain",
+      "humidity": 85,
+      "windSpeed": 8,
+      "icon": "rain"
+    }
+  }
+}

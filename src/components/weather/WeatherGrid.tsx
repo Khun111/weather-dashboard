@@ -7,16 +7,23 @@ interface WeatherGridProps {
   cities: WeatherData[]
   unit: TemperatureUnit
   onRemoveCity: (city: string) => void
+  onAddCity: (city: string) => void
   isLoading?: boolean
 }
 
-export function WeatherGrid({ cities, unit, onRemoveCity, isLoading }: WeatherGridProps) {
+export function WeatherGrid({ 
+  cities, 
+  unit, 
+  onRemoveCity, 
+  onAddCity,
+  isLoading 
+}: WeatherGridProps) {
   if (isLoading) {
     return <LoadingState />
   }
 
   if (cities.length === 0) {
-    return <EmptyState />
+    return <EmptyState onCityClick={onAddCity} isLoading={isLoading} />
   }
 
   return (

@@ -1,0 +1,1 @@
+export const AVAILABLE_CITIES = ['London', 'Paris', 'Lagos', 'Tokyo', 'New York'];
